@@ -1,4 +1,4 @@
-#installation (outcomment the line below)
+# installation (outcomment the line below)
 #!pip install decision-python
 
 import numpy as np
@@ -7,9 +7,9 @@ from decipy import executors as exe
 
 # define matrix
 DecisionMatrix = [
-         [80, 90, 600],
-         [65, 58, 200],
-         [83, 60, 400]
+    [80, 90, 600],
+    [65, 58, 200],
+    [83, 60, 400]
 ]
 
 DecisionMatrix = np.array(DecisionMatrix)
@@ -39,9 +39,9 @@ kwargs = {
 }
 
 # Build MCDM Executor
-wsm = exe.WSM(**kwargs) # Weighted Sum Method
-topsis = exe.Topsis(**kwargs) # Topsis 
-vikor = exe.Vikor(**kwargs) # Vikor 
+wsm = exe.WSM(**kwargs)  # Weighted Sum Method
+topsis = exe.Topsis(**kwargs)  # Topsis
+vikor = exe.Vikor(**kwargs)  # Vikor
 
 # show results
 print("WSM Ranks")
@@ -53,23 +53,22 @@ print(topsis.dataframe)
 print("Vikor Ranks")
 print(vikor.dataframe)
 
-
 # How to choose best MCDM Method ?
 
 # Instantiate Rank Analizer
-analizer = exe.RankSimilarityAnalyzer()
+comparision_list = exe.RankSimilarityAnalyzer()
 
 # Add MCDMs to anlizer
-analizer.add_executor(wsm)
-analizer.add_executor(topsis)
-analizer.add_executor(vikor)
+comparision_list.add_executor(wsm)
+comparision_list.add_executor(topsis)
+comparision_list.add_executor(vikor)
 
 # run analizer
-results = analizer.analyze()
+results = comparision_list.analyze()
 print(results)
 
 
-#Output
+# Output
 '''
 WSM Ranks
       RATE  RANK
