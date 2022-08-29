@@ -3,6 +3,8 @@ import numpy as np
 import sys
 import matplotlib.pyplot as plt
 
+#Developer: @KeivanTafakkori, 29 August 2022
+
 # decision variables
 x = {
      0: op.LpVariable("x1",lowBound = 0, upBound = 20),

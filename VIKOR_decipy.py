@@ -5,6 +5,8 @@ import numpy as np
 import pandas as pd
 from decipy import executors as exe
 
+#Developer: @KeivanTafakkori, 29 August 2022
+
 # define matrix
 DecisionMatrix = [
     [80, 90, 600],
