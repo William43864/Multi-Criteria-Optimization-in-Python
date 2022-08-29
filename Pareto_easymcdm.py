@@ -3,6 +3,8 @@
 
 from EasyMCDM.models.Pareto import Pareto
 
+#Developer: @KeivanTafakkori, 29 August 2022
+
 DecisionMatrix = {
     #      C1  C2  C3
     "A1": [80, 90, 600],
