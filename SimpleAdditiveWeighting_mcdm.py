@@ -7,7 +7,6 @@ import mcdm
 #Ensure to credit the original developer:
 #Platform: https://github.com/ktafakkori
 #Repository: Multi-Criteria-Optimization-in-Python
-#File: SimpleAdditiveWeighting_mcdm.py
 #Developer: © Keivan Tafakkori 
 #Year: 2022
 #Month: August

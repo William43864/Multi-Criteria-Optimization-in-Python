@@ -9,7 +9,6 @@ from decipy import executors as exe
 #Ensure to credit the original developer:
 #Platform: https://github.com/ktafakkori
 #Repository: Multi-Criteria-Optimization-in-Python
-#File: Vikor_decipy.py
 #Developer: © Keivan Tafakkori 
 #Year: 2022
 #Month: August

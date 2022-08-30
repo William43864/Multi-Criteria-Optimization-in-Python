@@ -7,7 +7,6 @@ from EasyMCDM.models.Irmo import Irmo
 #Ensure to credit the original developer:
 #Platform: https://github.com/ktafakkori
 #Repository: Multi-Criteria-Optimization-in-Python
-#File: Irmo_easymcdm.py
 #Developer: © Keivan Tafakkori 
 #Year: 2022
 #Month: August
