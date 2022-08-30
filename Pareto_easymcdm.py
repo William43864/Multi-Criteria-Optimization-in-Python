@@ -3,7 +3,17 @@
 
 from EasyMCDM.models.Pareto import Pareto
 
-#Developer: @KeivanTafakkori, 29 August 2022
+#============================================================================#
+#Ensure to credit the original developer:
+#Platform: https://github.com/ktafakkori
+#Repository: Multi-Criteria-Optimization-in-Python
+#File: Pareto_easymcdm.py
+#Developer: © Keivan Tafakkori 
+#Year: 2022
+#Month: August
+#Day: 30
+#Source: https://github.com/ktafakkori/Multi-Criteria-Optimization-in-Python
+#============================================================================#
 
 DecisionMatrix = {
     #      C1  C2  C3
