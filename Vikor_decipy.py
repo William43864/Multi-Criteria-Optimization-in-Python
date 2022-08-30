@@ -5,9 +5,18 @@ import numpy as np
 import pandas as pd
 from decipy import executors as exe
 
-#Developer: @KeivanTafakkori, 29 August 2022
+#============================================================================#
+#Ensure to credit the original developer:
+#Platform: https://github.com/ktafakkori
+#Repository: Multi-Criteria-Optimization-in-Python
+#File: Vikor_decipy.py
+#Developer: © Keivan Tafakkori 
+#Year: 2022
+#Month: August
+#Day: 30
+#Source: https://github.com/ktafakkori/Multi-Criteria-Optimization-in-Python
+#============================================================================#
 
-# define matrix
 DecisionMatrix = [
     [80, 90, 600],
     [65, 58, 200],
@@ -16,36 +25,27 @@ DecisionMatrix = [
 
 DecisionMatrix = np.array(DecisionMatrix)
 
-# alternatives
-alts = ['A1', 'A2', 'A3']
-
-# criterias
-crits = ['C1', 'C2', 'C3']
-
+Alternatives = ['A1', 'A2', 'A3']
+Criteria = ['C1', 'C2', 'C3']
 direction = [False, True, False]
-
-# criteria's weights
 weights = [1/3, 1/3, 1/3]
 
-# define DataFrame
-xij = pd.DataFrame(DecisionMatrix, index=alts, columns=crits)
+p = pd.DataFrame(DecisionMatrix, index=Alternatives, columns=Criteria)
 
 # create Executor (MCDM Method implementation)
 
 kwargs = {
-    'data': xij,
+    'data': p,
     'beneficial': direction,
     'weights': weights,
     'rank_reverse': True,
     'rank_method': "ordinal"
 }
 
-# Build MCDM Executor
-wsm = exe.WSM(**kwargs)  # Weighted Sum Method
+wsm = exe.WSM(**kwargs)        # Weighted Sum Method
 topsis = exe.Topsis(**kwargs)  # Topsis
-vikor = exe.Vikor(**kwargs)  # Vikor
+vikor = exe.Vikor(**kwargs)    # Vikor
 
-# show results
 print("WSM Ranks")
 print(wsm.dataframe)
 
@@ -55,20 +55,18 @@ print(topsis.dataframe)
 print("Vikor Ranks")
 print(vikor.dataframe)
 
-# How to choose best MCDM Method ?
 
-# Instantiate Rank Analizer
+# Rank Analysis
 comparision_list = exe.RankSimilarityAnalyzer()
 
-# Add MCDMs to anlizer
+# Add to analyzer
 comparision_list.add_executor(wsm)
 comparision_list.add_executor(topsis)
 comparision_list.add_executor(vikor)
 
-# run analizer
-results = comparision_list.analyze()
-print(results)
-
+# Results
+res = comparision_list.analyze()
+print(res)
 
 # Output
 '''
