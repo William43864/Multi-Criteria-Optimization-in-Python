@@ -1,6 +1,16 @@
 import pulp as op
 
-#Developer: @KeivanTafakkori, 24 December 2021
+#============================================================================#
+#Ensure to credit the original developer:
+#Platform: https://github.com/ktafakkori
+#Repository: Multi-Criteria-Optimization-in-Python
+#File: BestWorstMethod_pulp.py
+#Developer: © Keivan Tafakkori 
+#Year: 2022
+#Month: August
+#Day: 30
+#Source: https://github.com/ktafakkori/Multi-Criteria-Optimization-in-Python
+#============================================================================#
 
 def model(I,B,W,a,b,dispmodel="y",solve="y", dispresult="y"):
     m = op.LpProblem("Best-WorstMultiCriteriaDecisionMakingProblem", op.LpMinimize)
