@@ -1,15 +1,15 @@
 import pulp as op
 
-#============================================================================#
-#Ensure to credit the original developer:
-#Platform: https://github.com/ktafakkori
-#Repository: Multi-Criteria-Optimization-in-Python
-#Developer: © Keivan Tafakkori 
-#Year: 2022
-#Month: August
-#Day: 30
-#Source: https://github.com/ktafakkori/Multi-Criteria-Optimization-in-Python
-#============================================================================#
+'''
+Copyright (c) 2022, Keivan Tafakkori & FELOOP (https://ktafakkori.github.io)
+All rights reserved. Please read the "LICENSE" file for license terms.
+Project Code: FELOOP-MOP
+Project Title: Multi Criteria Optimization in Python
+Publisher: FELOOP (https://ktafakkori.github.io)
+Developer: Keivan Tafakkori (Founder of FELOOP)
+Cite as:
+Tafakkori, K. "Multi Criteria Optimization in Python" (URL: https://github.com/ktafakkori/Multi-Criteria-Optimization-in-Python), FELOOP, 2022.
+'''
 
 def model(I,B,W,a,b,dispmodel="y",solve="y", dispresult="y"):
     m = op.LpProblem("Best-WorstMultiCriteriaDecisionMakingProblem", op.LpMinimize)
